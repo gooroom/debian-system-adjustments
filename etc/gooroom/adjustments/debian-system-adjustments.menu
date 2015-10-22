@@ -1,0 +1,37 @@
+hide /usr/share/applications/Thunar-bulk-rename.desktop
+hide /usr/share/applications/Thunar-folder-handler.desktop
+hide /usr/share/applications/exo-file-manager.desktop
+hide /usr/share/applications/exo-mail-reader.desktop
+hide /usr/share/applications/exo-preferred-applications.desktop
+hide /usr/share/applications/exo-terminal-emulator.desktop
+hide /usr/share/applications/exo-web-browser.desktop
+hide /usr/share/applications/globaltime.desktop
+hide /usr/share/applications/ibus-setup-hangul.desktop
+hide /usr/share/applications/ibus-setup.desktop
+hide /usr/share/applications/im-config.desktop
+hide /usr/share/applications/menulibre.desktop
+hide /usr/share/applications/panel-desktop-handler.desktop
+hide /usr/share/applications/panel-preferences.desktop
+hide /usr/share/applications/python2.7.desktop
+hide /usr/share/applications/python3.4.desktop
+hide /usr/share/applications/services.desktop
+hide /usr/share/applications/shares.desktop
+hide /usr/share/applications/synaptic.desktop
+hide /usr/share/applications/thunar-settings.desktop
+hide /usr/share/applications/xfcalendar.desktop
+hide /usr/share/applications/xfce-backdrop.desktop
+hide /usr/share/applications/xfce-session-settings.desktop
+hide /usr/share/applications/xfce-wm-settings.desktop
+hide /usr/share/applications/xfce-wmweaks-settings.desktop
+hide /usr/share/applications/xfce-workspaces-settings.desktop
+hide /usr/share/applications/xfce-wfcalendar-settings.desktop
+hide /usr/share/applications/xfce4-about.desktop
+hide /usr/share/applications/xfce4-accessibility-settings.desktop
+hide /usr/share/applications/xfce4-appfinder.desktop
+hide /usr/share/applications/xfce4-mime-settings.desktop
+hide /usr/share/applications/xfce4-run.desktop
+hide /usr/share/applications/xfce4-session-logout.desktop
+hide /usr/share/applications/xfce4-settings-editor.desktop
+categories /usr/share/applications/Thunar.desktop System;
+categories /usr/share/applications/xfce4-mixer.desktop Settings;
+rename /usr/share/applications/Thunar.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/Thunar.desktop

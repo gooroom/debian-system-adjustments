@@ -1,0 +1,15 @@
+Source: debian-system-adjustments
+Section: admin
+Priority: optional
+Maintainer: gooroom <gooroom@gooroom.kr>
+Build-Depends: debhelper (>= 9) 
+Standards-Version: 3.9.6
+
+Package: debian-system-adjustments
+Architecture: all
+Depends: ${misc:Depends},
+         libglib2.0-bin,
+         python
+Description: Debian adjustments specific to Gooroom OS
+ Adjustments made to the Debian base.
+
