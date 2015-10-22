@@ -22,9 +22,9 @@ hide /usr/share/applications/xfcalendar.desktop
 hide /usr/share/applications/xfce-backdrop.desktop
 hide /usr/share/applications/xfce-session-settings.desktop
 hide /usr/share/applications/xfce-wm-settings.desktop
-hide /usr/share/applications/xfce-wmweaks-settings.desktop
+hide /usr/share/applications/xfce-wmtweaks-settings.desktop
 hide /usr/share/applications/xfce-workspaces-settings.desktop
-hide /usr/share/applications/xfce-wfcalendar-settings.desktop
+hide /usr/share/applications/xfce-xfcalendar-settings.desktop
 hide /usr/share/applications/xfce4-about.desktop
 hide /usr/share/applications/xfce4-accessibility-settings.desktop
 hide /usr/share/applications/xfce4-appfinder.desktop
