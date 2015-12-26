@@ -25,6 +25,7 @@ hide /usr/share/applications/xfce-wm-settings.desktop
 hide /usr/share/applications/xfce-wmtweaks-settings.desktop
 hide /usr/share/applications/xfce-workspaces-settings.desktop
 hide /usr/share/applications/xfce-xfcalendar-settings.desktop
+hide /usr/share/applications/xfce-ui-settings.desktop
 hide /usr/share/applications/xfce4-about.desktop
 hide /usr/share/applications/xfce4-accessibility-settings.desktop
 hide /usr/share/applications/xfce4-appfinder.desktop
@@ -32,8 +33,8 @@ hide /usr/share/applications/xfce4-mime-settings.desktop
 hide /usr/share/applications/xfce4-run.desktop
 hide /usr/share/applications/xfce4-session-logout.desktop
 hide /usr/share/applications/xfce4-settings-editor.desktop
+hide /usr/share/applications/xfce4-settings-manager.desktop
 hide /usr/share/applications/xfce4-power-manager-settings.desktop
-hide /usr/share/applications/xfce4-ui-settings.desktop
 hide /usr/share/applications/xfce4-settings-manager.desktop
 hide /usr/share/applications/xfce4-mixer.desktop
 hide /usr/share/applications/xfce-display-settings.desktop
