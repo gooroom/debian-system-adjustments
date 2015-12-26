@@ -32,6 +32,17 @@ hide /usr/share/applications/xfce4-mime-settings.desktop
 hide /usr/share/applications/xfce4-run.desktop
 hide /usr/share/applications/xfce4-session-logout.desktop
 hide /usr/share/applications/xfce4-settings-editor.desktop
+hide /usr/share/applications/xfce4-power-manager-settings.desktop
+hide /usr/share/applications/xfce4-ui-settings.desktop
+hide /usr/share/applications/xfce4-settings-manager.desktop
+hide /usr/share/applications/xfce4-mixer.desktop
+hide /usr/share/applications/xfce-display-settings.desktop
+hide /usr/share/applications/xfce-mouse-settings.desktop
+hide /usr/share/applications/xfce-keyboard-settings.desktop
+hide /usr/share/applications/users.desktop
+hide /usr/share/applications/network.desktop
+hide /usr/share/applications/time.desktop
 categories /usr/share/applications/Thunar.desktop System;
 categories /usr/share/applications/xfce4-mixer.desktop Settings;
 rename /usr/share/applications/Thunar.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/Thunar.desktop
+rename /usr/share/applications/xfce4-terminal.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/xfce4-terminal.desktop
