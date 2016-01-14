@@ -45,6 +45,7 @@ hide /usr/share/applications/network.desktop
 hide /usr/share/applications/time.desktop
 hide /usr/share/applications/gooroom-control-center.desktop
 hide /usr/share/applications/nm-connection-editor.desktop
+hide /usr/share/applications/system-config-printer.desktop
 categories /usr/share/applications/Thunar.desktop System;
 categories /usr/share/applications/xfce4-mixer.desktop Settings;
 rename /usr/share/applications/Thunar.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/Thunar.desktop
