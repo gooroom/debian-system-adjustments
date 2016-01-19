@@ -46,7 +46,11 @@ hide /usr/share/applications/time.desktop
 hide /usr/share/applications/gooroom-control-center.desktop
 hide /usr/share/applications/nm-connection-editor.desktop
 hide /usr/share/applications/system-config-printer.desktop
-categories /usr/share/applications/Thunar.desktop System;
-categories /usr/share/applications/xfce4-mixer.desktop Settings;
+hide /usr/share/applications/gnome-printer-panel.desktop
+hide /usr/share/applications/pavucontrol.desktop
+categories /usr/share/applications/Thunar.desktop System
+categories /usr/share/applications/xfce4-mixer.desktop Settings
+categories /usr/share/applications/mintupdate.desktop System
+categories /usr/share/applications/xscreensaver-properties.desktop System
 rename /usr/share/applications/Thunar.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/Thunar.desktop
 rename /usr/share/applications/xfce4-terminal.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/xfce4-terminal.desktop
