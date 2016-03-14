@@ -49,6 +49,7 @@ hide /usr/share/applications/system-config-printer.desktop
 hide /usr/share/applications/gnome-printer-panel.desktop
 hide /usr/share/applications/pavucontrol.desktop
 hide /usr/share/applications/evince.desktop
+hide /usr/share/applications/gksu.desktop
 categories /usr/share/applications/Thunar.desktop System
 categories /usr/share/applications/xfce4-mixer.desktop Settings
 categories /usr/share/applications/mintupdate.desktop System
