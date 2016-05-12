@@ -1,3 +1,25 @@
+debian-system-adjustments (1.1+grm1) gooroom-1.0; urgency=medium
+
+  [ gooroom ]
+  * rename directory rename-menu-entries to enamed-menu-entries
+  * fix to typo error at debian-system-adjustments.menu
+  * update hide menu for gooroom-control-center
+  * add renamed-menu-entries/xfce4-terminal.desktop
+  * hide xfce-ui-settings.desktop and xfce4-settings-manager.desktop
+  * modify xfce-settings-manager.desktop at debian-system-adjustments.menu
+  * hide xfce4-screenshooter in menu
+  * hide gooroom-control-center and nm-connection-editor.desktop
+  * hide the system-config-printer.desktop in menu
+  * hide gnome-printer-panel.desktop and pavucontrol.desktop
+  * hide evince.desktop
+  * hide gksu.desktop
+  * remove /usr/share/Thunar/thunar-sendto-email.desktop
+  * check /usr/share/debian-system-adjustments/removed-thunar-menu-entries
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Fri, 13 May 2016 02:07:56 +0900
+
 debian-system-adjustments (1.0) gooroom-1.0; urgency=medium
 
   * Initial Release
