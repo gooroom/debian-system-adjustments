@@ -52,6 +52,7 @@ hide /usr/share/applications/evince.desktop
 hide /usr/share/applications/gksu.desktop
 hide /usr/share/applications/display-im6.desktop
 hide /usr/share/applications/display-im6.q16.desktop
+hide /usr/share/applications/gooroomsources.desktop
 categories /usr/share/applications/Thunar.desktop System
 categories /usr/share/applications/xfce4-mixer.desktop Settings
 categories /usr/share/applications/mintupdate.desktop System
