@@ -1,3 +1,13 @@
+debian-system-adjustments (1.2+grm1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [f0316db3] hide display-im6.desktop and display-im6.q16.desktop
+  * [dfcbab28] hide gooroomsources.desktop
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Wed, 08 Feb 2017 16:19:20 +0900
+
 debian-system-adjustments (1.1+grm1) gooroom-1.0; urgency=medium
 
   [ gooroom ]
