@@ -53,6 +53,14 @@ hide /usr/share/applications/gksu.desktop
 hide /usr/share/applications/display-im6.desktop
 hide /usr/share/applications/display-im6.q16.desktop
 hide /usr/share/applications/gooroomsources.desktop
+hide /usr/share/applications/gscriptor.desktop
+hide /usr/share/applications/plank.desktop
+hide /usr/share/applications/gooroom-smartcard-agent.desktop
+hide /usr/share/applications/grm-role-tool.desktop
+hide /usr/share/applications/nm-applet.desktop
+hide /usr/share/applications/gooroomupdate.desktop
+hide /usr/share/applications/thunar-volman-settings.desktop
+hide /usr/share/applications/im-config.desktop
 categories /usr/share/applications/Thunar.desktop System
 categories /usr/share/applications/xfce4-mixer.desktop Settings
 categories /usr/share/applications/mintupdate.desktop System
