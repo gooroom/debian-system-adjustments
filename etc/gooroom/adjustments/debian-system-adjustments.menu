@@ -61,6 +61,8 @@ hide /usr/share/applications/nm-applet.desktop
 hide /usr/share/applications/gooroomupdate.desktop
 hide /usr/share/applications/thunar-volman-settings.desktop
 hide /usr/share/applications/im-config.desktop
+hide /usr/share/applications/uim.desktop
+hide /usr/share/applications/xfce-backdrop-settings.desktop
 categories /usr/share/applications/Thunar.desktop System
 categories /usr/share/applications/xfce4-mixer.desktop Settings
 categories /usr/share/applications/mintupdate.desktop System
