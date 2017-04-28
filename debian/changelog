@@ -1,3 +1,13 @@
+debian-system-adjustments (1.2.1+grm1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [f412e178] Cleared a list of application that are not registered with mimetype
+  * [a38f00ce] Hide uim and xfce-backdrop-settings at debian-system-adjustments.menu
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Fri, 28 Apr 2017 14:06:49 +0900
+
 debian-system-adjustments (1.2+grm1) gooroom-1.0; urgency=medium
 
   [ jongkyung.woo ]
