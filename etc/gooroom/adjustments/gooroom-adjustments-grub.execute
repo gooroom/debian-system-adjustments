@@ -2,6 +2,7 @@
 import os
 import commands
 import syslog
+from subprocess import call
 
 try:
     if os.path.exists("/etc/grub.d/10_linux"):
@@ -12,5 +13,17 @@ try:
             gooroom_grub_title = "Gooroom OS"
         os.system("sed -i -e 's@OS=\"${GRUB_DISTRIBUTOR}\"@OS=\"%s\"@g' /etc/grub.d/10_linux" % gooroom_grub_title)
         os.system("sed -i -e 's@OS=\"${GRUB_DISTRIBUTOR} GNU/Linux\"@OS=\"%s\"@g' /etc/grub.d/10_linux" % gooroom_grub_title)
+
+    if os.path.exists("/etc/default/grub"):
+        comment = "## Gooroom Background Image"
+        rc = call (["grep", "-qrs", comment, "/etc/default/grub"], shell=False)
+        if rc == 0:
+            print("You have already registered Gooroom's Grub background")
+        elif rc == 1:
+            print("not exist")
+            os.system("echo '\n%s\nGRUB_BACKGROUND=\'/usr/share/plymouth/themes/gooroom/gooroom_bg_17_logo.png\'' >> /etc/default/grub" % comment)
+        else:
+            print("error %d" % rc)
+
 except Exception, detail:
     syslog.syslog("Couldn't adjust /etc/grub.d/10_linux: %s" % detail)
