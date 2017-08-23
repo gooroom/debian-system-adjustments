@@ -5,6 +5,37 @@ import syslog
 from subprocess import call
 
 try:
+    #
+    ## /etc/default/grub
+    #
+    if os.path.exists("/etc/default/grub"):
+        # GRUB_DISABLE_LINUX_UUID=true
+        os.system ("sed -i -e s'@#GRUB_DISABLE_LINUX_UUID=true@GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
+
+        # GRUB_BACKGROUND=gooroom_bg_17_logo.png
+        comment = "## Gooroom Background Image"
+        rc = call (["grep", "-qrs", comment, "/etc/default/grub"], shell=False)
+        if rc == 0:
+            print("Gooroom's Grub Background has already been registered")
+        elif rc == 1:
+            print("not exist")
+            os.system("echo '\n%s\nGRUB_BACKGROUND=\'/usr/share/plymouth/themes/gooroom/gooroom_bg_17_logo.png\'' >> /etc/default/grub" % comment)
+        else:
+            print("error %d" % rc)
+
+        # GRUB_CMDLINE_DEFAULT="intremap=off"
+        if os.path.exists("/usr/share/gooroom/security/os-protector/shadow_box.ko"):
+           rc = call (["grep", "-qrs", "intremap=off", "/etc/default/grub"], shell=False)
+           if rc == 0:
+               print("Kernel Parameter intremap=off has already been registered.")
+           elif rc == 1:
+               os.system("sed -i -e s'@GRUB_CMDLINE_LINUX_DEFAULT=\"@GRUB_CMDLINE_LINUX_DEFAULT=\"intremap=off @g' /etc/default/grub")
+           else:
+               print("error %d" % rc)
+
+    #
+    ## /etc/grub.d/10_linux (Change the GRUB_TITLE)
+    #
     if os.path.exists("/etc/grub.d/10_linux"):
         # Update the label in /etc/grub.d/10_linux
         if os.path.exists("/etc/gooroom/info"):
@@ -14,23 +45,14 @@ try:
         os.system("sed -i -e 's@OS=\"${GRUB_DISTRIBUTOR}\"@OS=\"%s\"@g' /etc/grub.d/10_linux" % gooroom_grub_title)
         os.system("sed -i -e 's@OS=\"${GRUB_DISTRIBUTOR} GNU/Linux\"@OS=\"%s\"@g' /etc/grub.d/10_linux" % gooroom_grub_title)
 
-    if os.path.exists("/etc/default/grub"):
-        comment = "## Gooroom Background Image"
-        rc = call (["grep", "-qrs", comment, "/etc/default/grub"], shell=False)
-        if rc == 0:
-            print("You have already registered Gooroom's Grub background")
-        elif rc == 1:
-            print("not exist")
-            os.system("echo '\n%s\nGRUB_BACKGROUND=\'/usr/share/plymouth/themes/gooroom/gooroom_bg_17_logo.png\'' >> /etc/default/grub" % comment)
-        else:
-            print("error %d" % rc)
-
-    # Change the grub title theme
+    #
+    # /etc/grub.d/05_debian_theme (Change the grub title theme)
+    #
     if os.path.exists("/etc/grub.d/05_debian_theme"):
         comment = "## Gooroom Title Theme"
         rc = call (["grep", "-qrs", comment, "/etc/grub.d/05_debian_theme"], shell=False)
         if rc == 0:
-            print("You have already registered Gooroom's Title Theme")
+            print("Gooroom's Grub Title Theme has already been registered")
         elif rc == 1:
             os.system("sed -i -e 's@echo \"  true\"@#echo \"  true\"\\n\\t\\t%s\\n\\t\\techo \"  set color_normal=light-cyan/black\"\\n\\t\\techo \"  set color_highlight=white/black\"@g' /etc/grub.d/05_debian_theme" % comment)
         else:
