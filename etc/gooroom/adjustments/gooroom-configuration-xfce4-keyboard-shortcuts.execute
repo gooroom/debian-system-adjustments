@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+## Gooroom XFCE Shortcut Default Settings
+#
+
+SRC_FILE=/usr/share/debian-system-adjustments/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+TARGET_DIR=/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/
+
+if [ -e $SRC_FILE ]; then
+  cp $SRC_FILE $TARGET_DIR
+fi
