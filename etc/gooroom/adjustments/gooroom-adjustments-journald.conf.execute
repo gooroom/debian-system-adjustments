@@ -1,0 +1,14 @@
+#!/usr/bin/python
+import os
+import commands
+import syslog
+
+gooroom_systemd_Storage_value="Storage=persistent"
+gooroom_systemd_MaxRetentionSec_value="MaxRetentionSec=1month"
+
+try:
+    if os.path.exists("/etc/systemd/journald.conf"):
+        os.system("sed -i -e 's@#Storage=auto@%s@g' /etc/systemd/journald.conf" % gooroom_systemd_Storage_value)
+        os.system("sed -i -e 's@#MaxRetentionSec=@%s@g' /etc/systemd/journald.conf" % gooroom_systemd_MaxRetentionSec_value)
+except Exception, detail:
+    syslog.syslog("Couldn't adjust /etc/systemd/journald.conf: %s" % detail)
