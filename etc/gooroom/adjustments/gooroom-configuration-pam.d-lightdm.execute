@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#
+## Gooroom /etc/pam.d/lightdm Default Settings
+#
+# - If the gooroom-encfs-utils exists,
+#   It defaults to the lightdm setting in the gooroom-encfs-utils
+#
+#   However, The configuration of the gooroom-encfs-utils
+#            ONLY supports Independt mode. (NOT support Managed Mode)
+
+ECRYPTFS_PAM_FILE=/usr/share/debian-system-adjustments/pam.d/lightdm
+ENCFS_PAM_FILE=/usr/share/gooroom-encfs-utils/config/pam.d/lightdm
+TARGET_DIR=/etc/pam.d/
+
+dpkg -l | grep -q gooroom-encfs-utils
+if [ $? -eq 0 ]; then
+    [ -e $ENCFS_PAM_FILE ] && cp $ENCFS_PAM_FILE $TARGET_DIR
+else
+    [ -e $ECRYPTFS_PAM_FILE ] && cp $ECRYPTFS_PAM_FILE $TARGET_DIR
+fi
