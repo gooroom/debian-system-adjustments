@@ -1,0 +1,12 @@
+#!/usr/bin/python
+import os
+import commands
+import syslog
+
+gooroom_systemd_KillUserProcesses_value="KillUserProcesses=yes"
+
+try:
+    if os.path.exists("/etc/systemd/logind.conf"):
+        os.system("sed -i -e 's@#KillUserProcesses=no@%s@g' /etc/systemd/logind.conf" % gooroom_systemd_KillUserProcesses_value)
+except Exception, detail:
+    syslog.syslog("Couldn't adjust /etc/systemd/logind.conf: %s" % detail)
