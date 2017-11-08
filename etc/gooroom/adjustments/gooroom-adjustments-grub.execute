@@ -9,8 +9,16 @@ try:
     ## /etc/default/grub
     #
     if os.path.exists("/etc/default/grub"):
-        # GRUB_DISABLE_LINUX_UUID=true
-        os.system ("sed -i -e s'@#GRUB_DISABLE_LINUX_UUID=true@GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
+        # Check gooroom-grub package
+        rc = call (["dpkg", "-s", "gooroom-grub"], shell=False)
+        if rc == 0:
+            # - GRUB_DISABLED_LINUX_UUID
+            os.system ("sed -i -e s'@#GRUB_DISABLE_LINUX_UUID=true@GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
+        elif rc == 1:
+            # - GRUB_ENABLED_LINUX_UUID
+            os.system ("sed -i -e s'@GRUB_DISABLE_LINUX_UUID=true@#GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
+        else:
+            print("error %d" % rc)
 
         # GRUB_BACKGROUND=gooroom_bg_17_logo.png
         comment = "## Gooroom Background Image"
