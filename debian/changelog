@@ -1,3 +1,22 @@
+debian-system-adjustments (1.2.2+grm1u1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [fcbc78eb] Specified the Storage of systemd as persistent at journald.conf
+  * [8b7f37bd] Added Gooroom Background Images at grub
+  * [8f1bd686] Added Gooroom Title Theme at grub
+  * [10c5a861] Added GRUB_DISABLE_LINUX_UUID and intremap=off at gooroom-adjustments-grub.execute
+  * [7a5c4152] Added keyboard shortcuts default value of xfce4
+  * [a8889bc8] Remove unnecessary files
+  * [14624e2a] Remove /usr/share/debian-system-adjustments/grub/restore_10_linux_grub.py in postinst
+  * [fe76c252] Modified MaxRetentionSec=1month at journald.conf
+  * [a4e2ead8] Added gooroom-configuration-pam.d-lightdm.execute
+  * [f3e0ba5a]  Added gooroom-adjustments-logined.conf.execute
+  * [fe9f3aec] GRUB supports partition LABEL only if gooroom-grub is installed
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 13 Nov 2017 19:21:30 +0900
+
 debian-system-adjustments (1.2.1+grm1) gooroom-1.0; urgency=medium
 
   [ jongkyung.woo ]
