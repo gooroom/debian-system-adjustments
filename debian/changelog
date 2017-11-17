@@ -1,3 +1,12 @@
+debian-system-adjustments (1.2.3+grm1u1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [ea067b8c] Prevent the passwd command from changing ecryptfs's mount password
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Fri, 17 Nov 2017 16:29:18 +0900
+
 debian-system-adjustments (1.2.2+grm1u1) gooroom-1.0; urgency=medium
 
   [ jongkyung.woo ]
