@@ -1,0 +1,11 @@
+[Unit]
+Description=Gooroom Shutdown Trigger
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/gooroom-shutdown-trigger.sh
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target
