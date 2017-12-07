@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Bugfix
+if [ "$(dpkg-query --showformat='${Version}' --show debian-system-adjustments)" = "1.2.4+grm1u1" ]; then
+  [ -e /var/lib/dpkg/info/debian-system-adjustments.postrm ] \
+    && rm /var/lib/dpkg/info/debian-system-adjustments.postrm
+fi
+
+# Remove Service
+if [ -e /etc/systemd/system/gooroom-shutdown-trigger.service ]; then
+  rm /etc/systemd/system/gooroom-shutdown-trigger.service
+
+  # Disable Service
+  systemctl is-enabled gooroom-shutdown-trigger
+  [ $? = 0 ] && systemctl disable gooroom-shutdown-trigger
+fi
+

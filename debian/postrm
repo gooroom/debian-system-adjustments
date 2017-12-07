@@ -1,6 +1,2 @@
-#!/bin/bash
-
-systemctl disable gooroom-shutdown-trigger
-
-[ -e /etc/systemd/system/gooroom-shutdown-trigger.service ] && rm /etc/systemd/system/gooroom-shutdown-trigger.service
-
+#! /bin/bash
+#echo "postrm..."
