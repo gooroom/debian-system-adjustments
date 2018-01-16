@@ -11,7 +11,6 @@
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
       <property name="&lt;Super&gt;o" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Super&gt;c" type="string" value="gooroom-control-center"/>
-      <property name="&lt;Super&gt;x" type="string" value="xfce4-terminal"/>
       <property name="&lt;Super&gt;p" type="string" value="xfce4-panel --preferences"/>
       <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
       <property name="Print" type="string" value="xfce4-screenshooter"/>
