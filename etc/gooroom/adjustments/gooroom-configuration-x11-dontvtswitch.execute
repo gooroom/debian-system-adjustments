@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+## Gooroom /etc/X11/xorg.conf Default Settings
+#
+
+SRC_FILE=/usr/share/debian-system-adjustments/X11/xorg.conf
+TARGET_DIR=/etc/X11/xorg.conf
+
+if [ -e $SRC_FILE ]; then
+  cp $SRC_FILE $TARGET_DIR
+fi
