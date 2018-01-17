@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#
+## Gooroom Command Permission Settings
+#
+
+if [ -e /usr/bin/xterm ]; then
+  chmod 700 /usr/bin/xterm
+fi
