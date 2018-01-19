@@ -66,5 +66,14 @@ try:
         else:
             print("error %d" % rc)
 
+    #
+    # /etc/grub.d/40_gooroom_custom
+    #
+    custom_file="/etc/grub.d/40_gooroom_custom"
+    os.system("echo \"#!/bin/bash\" > %s" % custom_file)
+    os.system("echo \"exec tail -n +3 \$0\\n\" >> %s" % custom_file)
+    os.system("echo \"loadfont /boot/grub/fonts/gooroom-font.pf2\" >> %s" % custom_file)
+    os.system("chmod 755 %s" % custom_file)
+
 except Exception, detail:
     syslog.syslog("Couldn't adjust /etc/grub.d/10_linux: %s" % detail)
