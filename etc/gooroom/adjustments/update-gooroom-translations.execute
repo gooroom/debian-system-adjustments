@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# update gooroom-translations 
+
+TARGET_DIR=/usr/share/locale/ko/LC_MESSAGES
+GOOROOM_DIR=/usr/share/gooroom/locale/ko/LC_MESSAGES
+
+for i in $(ls $GOOROOM_DIR/*.mo); do
+  if [ -e $TARGET_DIR/$(basename $i) ]; then
+    cp $GOOROOM_DIR/$(basename $i) $TARGET_DIR
+  fi
+done
