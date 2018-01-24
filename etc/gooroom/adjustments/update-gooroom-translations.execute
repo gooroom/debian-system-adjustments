@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# update gooroom-translations 
-
+# Update gooroom-translations
 TARGET_DIR=/usr/share/locale/ko/LC_MESSAGES
 GOOROOM_DIR=/usr/share/gooroom/locale/ko/LC_MESSAGES
 
@@ -10,3 +9,12 @@ for i in $(ls $GOOROOM_DIR/*.mo); do
     cp $GOOROOM_DIR/$(basename $i) $TARGET_DIR
   fi
 done
+
+# Translate galculator.desktop
+GALCULATOR_DESKTOP=/usr/share/applications/galculator.desktop
+if [ -e $GALCULATOR_DESKTOP ]; then
+  grep -qrs "Name\[ko\]" $GALCULATOR_DESKTOP
+  if [ $? -eq 1 ]; then
+    sed -i -e 's@Name=Galculator@Name=Galculator\nName[ko]=계산기@g' $GALCULATOR_DESKTOP
+  fi
+fi
