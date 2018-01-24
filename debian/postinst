@@ -47,11 +47,15 @@ ln -sf /usr/share/debian-system-adjustments/gooroom-shutdown-trigger.service /et
 systemctl enable gooroom-shutdown-trigger
 
 # grub-mkfont
-if [ -e /usr/share/fonts/truetype/nanum/NanumBarunpenB.ttf ]; then
-  if [ ! -e /boot/grub/fonts ]; then
-     mkdir -p /boot/grub/fonts
-  fi
-  grub-mkfont -s 16 -o /boot/grub/fonts/gooroom-font.pf2 /usr/share/fonts/truetype/nanum/NanumBarunpenB.ttf
+if [ ! -e /boot/grub/fonts ]; then
+   mkdir -p /boot/grub/fonts
+fi
+
+# create the hangul pf2
+if [ -e /usr/share/fonts/truetype/naver-d2coding/D2Coding-Ver1.3-20171129.ttf ]; then
+  grub-mkfont -s 20 -o /boot/grub/fonts/gooroom-font.pf2 /usr/share/fonts/truetype/naver-d2coding/D2Coding-Ver1.3-20171129.ttf
+elif [ -e /usr/share/fonts/truetype/nanum/NanumBarunpenB.ttf ]; then
+  grub-mkfont -s 20 -o /boot/grub/fonts/gooroom-font.pf2 /usr/share/fonts/truetype/nanum/NanumBarunpenB.ttf
 fi
 
 #DEBHELPER#
