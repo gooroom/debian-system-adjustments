@@ -5,8 +5,8 @@
 #
 
 SRC_FILE=/usr/share/debian-system-adjustments/X11/xorg.conf
-TARGET_DIR=/etc/X11/xorg.conf
+TARGET_FILE=/etc/X11/xorg.conf
 
 if [ -e $SRC_FILE ]; then
-  cp $SRC_FILE $TARGET_DIR
+  cp $SRC_FILE $TARGET_FILE
 fi
