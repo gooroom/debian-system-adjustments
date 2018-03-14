@@ -1,3 +1,24 @@
+debian-system-adjustments (1.2.5+grm1u1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [19cd2930] Delete postrm and add service related exception handing in prerm
+  * [0b233aa0] Added gooroom-configuration-x11-dontvtswitch.execute
+  * [1007db0f] Remove xfce4-terminal's shortcut at xfce4-keyboard-shortcuts.xml
+  * [8aae4f50] Added gooroom-command-permission-settings.execute
+  * [33f5e5c8] Grub menu supports Korean
+  * [4095d3ee] Specified naver-d2coding font as defaujlt for gooroom-font.pf2
+  * [ae46d4f4] Added gooroom-translations to be updated at boot time
+  * [9d9aacd0] Updated korean translation of Galculator.desktop file
+  * [62ee4fab] Support rewrap-passphrase on gooroom-control-center
+  * [5e0a951a] Modified xfwm's tile windows to window's shortcut
+  * [0e3d2be6] Disabled SystemdService in org.xfce.xfce4.Notifications.service file
+  * [3a466756] Renamed org.xfce.xfce4-notifyd.Notifications.service.execute
+  * [e245c099] Modified by getting WEBStorage from pam_mount.conf.xml file
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Wed, 14 Mar 2018 18:48:14 +0900
+
 debian-system-adjustments (1.2.4+grm1u1) gooroom-1.0; urgency=medium
 
   [ jongkyung.woo ]
