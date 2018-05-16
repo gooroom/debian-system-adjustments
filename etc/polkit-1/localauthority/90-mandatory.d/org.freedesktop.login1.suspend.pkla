@@ -1,0 +1,4 @@
+[Gooroom suspend]
+Identity=unix-user:*
+Action=org.freedesktop.login1.suspend
+ResultActive=yes
