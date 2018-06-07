@@ -1,3 +1,12 @@
+debian-system-adjustments (1.2.7+grm1u1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [c7675ba5] Fixed prerm and Removed org.freedesktop.login1.suspend.pkla
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Thu, 07 Jun 2018 14:21:16 +0900
+
 debian-system-adjustments (1.2.6+grm1u1) gooroom-1.0; urgency=medium
 
   [ jongkyung.woo ]
