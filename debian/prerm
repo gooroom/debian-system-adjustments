@@ -7,11 +7,15 @@ if [ "$(dpkg-query --showformat='${Version}' --show debian-system-adjustments)" 
 fi
 
 # Remove Service
-if [ -e /etc/systemd/system/gooroom-shutdown-trigger.service ]; then
-  rm /etc/systemd/system/gooroom-shutdown-trigger.service
-
+if [ -L /etc/systemd/system/gooroom-shutdown-trigger.service ]; then
   # Disable Service
   systemctl is-enabled gooroom-shutdown-trigger
   [ $? = 0 ] && systemctl disable gooroom-shutdown-trigger
+
+  #rm /etc/systemd/system/gooroom-shutdown-trigger.service
 fi
 
+# Remove removed-thunar-menu-entries directory
+if [ -e /usr/share/debian-system-adjustments/removed-thunar-menu-entries ]; then
+  rm -rf /usr/share/debian-system-adjustments/removed-thunar-menu-entries
+fi
