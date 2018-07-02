@@ -13,10 +13,10 @@ try:
         rc = call (["dpkg", "-s", "gooroom-grub"], shell=False)
         if rc == 0:
             # - GRUB_DISABLED_LINUX_UUID
-            os.system ("sed -i -e s'@#GRUB_DISABLE_LINUX_UUID=true@GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
+            os.system ("sed -i -e s'@#*GRUB_DISABLE_LINUX_UUID=true@GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
         elif rc == 1:
             # - GRUB_ENABLED_LINUX_UUID
-            os.system ("sed -i -e s'@GRUB_DISABLE_LINUX_UUID=true@#GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
+            os.system ("sed -i -e s'@^GRUB_DISABLE_LINUX_UUID=true@#GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
         else:
             print("error %d" % rc)
 
