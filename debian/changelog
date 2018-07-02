@@ -1,3 +1,12 @@
+debian-system-adjustments (1.2.8+grm1u1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [4197269e] Added to check the beginning of string at GRUB_DISABLE_LINUX_UUID
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 02 Jul 2018 18:41:46 +0900
+
 debian-system-adjustments (1.2.7+grm1u1) gooroom-1.0; urgency=medium
 
   [ jongkyung.woo ]
