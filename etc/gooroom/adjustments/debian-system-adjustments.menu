@@ -1,4 +1,5 @@
 hide /usr/share/applications/DockX.desktop
+hide /usr/share/applications/Thunar.desktop
 hide /usr/share/applications/Thunar-bulk-rename.desktop
 hide /usr/share/applications/Thunar-folder-handler.desktop
 hide /usr/share/applications/blueman-adapters.desktop
@@ -27,7 +28,6 @@ hide /usr/share/applications/network.desktop
 hide /usr/share/applications/nm-applet.desktop
 hide /usr/share/applications/nm-connection-editor.desktop
 hide /usr/share/applications/org.gnome.FileRoller.desktop
-hide /usr/share/applications/org.gnome.Nautilus.desktop
 hide /usr/share/applications/panel-desktop-handler.desktop
 hide /usr/share/applications/panel-preferences.desktop
 hide /usr/share/applications/pavucontrol.desktop
@@ -71,10 +71,11 @@ hide /usr/share/applications/xfce4-settings-editor.desktop
 hide /usr/share/applications/xfce4-terminal.desktop
 hide /usr/share/applications/xterm.desktop
 show /usr/share/applications/gooroom-control-center.desktop
-categories /usr/share/applications/Thunar.desktop System
+#categories /usr/share/applications/Thunar.desktop System
 categories /usr/share/applications/xfce4-mixer.desktop Settings
 categories /usr/share/applications/mintupdate.desktop System
 categories /usr/share/applications/xscreensaver-properties.desktop System
 rename /usr/share/applications/Thunar.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/Thunar.desktop
-rename /usr/share/applications/xfce4-terminal.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/xfce4-terminal.desktop
 rename /usr/share/applications/mousepad.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/mousepad.desktop
+rename /usr/share/applications/org.gnome.Nautilus.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/org.gnome.Nautilus.desktop
+rename /usr/share/applications/xfce4-terminal.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/xfce4-terminal.desktop
