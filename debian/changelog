@@ -1,3 +1,16 @@
+debian-system-adjustments (1.3.0+grm1u1) gooroom-1.0; urgency=medium
+
+  [ cjheo ]
+  * [a0cc8ce1] Changed the login PAM configuration file to change password for a online user
+
+  [ jongkyung.woo ]
+  * [04d9d9d5] Updated debian-system-adjustments.menu
+  * [96ca2668] show Nautilus.desktop and hide Thunar.desktop
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Thu, 11 Oct 2018 10:00:50 +0900
+
 debian-system-adjustments (1.2.8+grm1u1) gooroom-1.0; urgency=medium
 
   [ jongkyung.woo ]
