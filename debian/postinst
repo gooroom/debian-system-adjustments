@@ -52,8 +52,9 @@ if [ ! -e /boot/grub/fonts ]; then
 fi
 
 # create the hangul pf2
-if [ -e /usr/share/fonts/truetype/naver-d2coding/D2Coding-Ver1.3-20171129.ttf ]; then
-  grub-mkfont -s 20 -o /boot/grub/fonts/gooroom-font.pf2 /usr/share/fonts/truetype/naver-d2coding/D2Coding-Ver1.3-20171129.ttf
+GRUB_FONTNAME=D2Coding-Ver1.3.2-20180524-all.ttc
+if [ -e /usr/share/fonts/truetype/naver-d2coding/$GRUB_FONTNAME ]; then
+  grub-mkfont -s 20 -o /boot/grub/fonts/gooroom-font.pf2 /usr/share/fonts/truetype/naver-d2coding/$GRUB_FONTNAME
 elif [ -e /usr/share/fonts/truetype/nanum/NanumBarunpenB.ttf ]; then
   grub-mkfont -s 20 -o /boot/grub/fonts/gooroom-font.pf2 /usr/share/fonts/truetype/nanum/NanumBarunpenB.ttf
 fi
@@ -61,5 +62,3 @@ fi
 #DEBHELPER#
 
 exit 0
-
-
