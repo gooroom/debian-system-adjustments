@@ -1,0 +1,28 @@
+#!/usr/bin/python
+
+#
+## Gooroom /etc/pam.d/common-session-noninteractive Default Settings
+#
+# - Read the https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=765854
+#
+#   common-session or common-session-noninteractive is based
+#   on whether the service provides "shell-like" interactive capabilities to
+#   the user (e.g.: login, ssh, gdm) or is a non-interactive session or a
+#   session mediated by a structured protocol (e.g.: cron, cups, samba, ppp).
+#
+#   $cat /dev/shm/ecryptfs-user-Private
+
+import os
+import commands
+import syslog
+
+PAM_CONF="/etc/pam.d/common-session-noninteractive"
+noninteractive_value_1="session\toptional\tpam_ecryptfs.so"
+noninteractive_value_2="session\toptional\tpam_ecryptfs.so "
+
+try:
+    if os.path.exists(PAM_CONF):
+        os.system("sed -i -e 's@^%s@#%s@g' %s" % (noninteractive_value_1, noninteractive_value_1, PAM_CONF))
+        os.system("sed -i -e 's@^%s@#%s@g' %s" % (noninteractive_value_2, noninteractive_value_2, PAM_CONF))
+except Exception, detail:
+    syslog.syslog("Couldn't adjust %s: %s" % (PAM_CONF, detail))
