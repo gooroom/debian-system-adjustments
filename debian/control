@@ -10,6 +10,6 @@ Architecture: all
 Depends: ${misc:Depends},
          libglib2.0-bin,
          python
-Description: Debian adjustments specific to Gooroom OS
- Adjustments made to the Debian base.
-
+Description: Debian system adjustments
+ This package contains scripts and files that changes 
+ from Debian to Gooroom Flatform based enviroment.
