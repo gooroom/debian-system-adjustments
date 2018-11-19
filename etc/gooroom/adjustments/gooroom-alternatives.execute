@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+update-alternatives --list x-www-browser | grep -qw "/usr/bin/gooroom-browser"
+if [ $? -ne 0 ]; then
+    update-alternatives --install /usr/bin/x-www-browser \
+                                  x-www-browser \
+                                  /usr/bin/gooroom-browser 9999
+fi
