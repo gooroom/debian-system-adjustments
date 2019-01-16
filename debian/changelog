@@ -1,3 +1,17 @@
+debian-system-adjustments (1.3.1+grm1u1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [5fd85c28] Added common-session-noninteractive.execute
+  * [3e0255ee] Modified description
+  * [87278f36] Set gooroom-browser to x-www-browser
+
+  [ cjheo ]
+  * [5fc93247] Fixed the problem that root name is changed when connecting GPMS.
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Wed, 16 Jan 2019 09:51:44 +0900
+
 debian-system-adjustments (1.3.0+grm1u1) gooroom-1.0; urgency=medium
 
   [ cjheo ]
