@@ -1,3 +1,12 @@
+debian-system-adjustments (1.3.2+grm1u1) gooroom-1.0; urgency=medium
+
+  [ jongkyung.woo ]
+  * [5be07df1] Modified gooroom-alternatives.exeute permissions
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Wed, 16 Jan 2019 17:06:31 +0900
+
 debian-system-adjustments (1.3.1+grm1u1) gooroom-1.0; urgency=medium
 
   [ jongkyung.woo ]
