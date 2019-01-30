@@ -4,6 +4,7 @@ hide /usr/share/applications/Thunar-bulk-rename.desktop
 hide /usr/share/applications/Thunar-folder-handler.desktop
 hide /usr/share/applications/blueman-adapters.desktop
 hide /usr/share/applications/dbx_preference.desktop
+hide /usr/share/applications/debian-uxterm.desktop
 hide /usr/share/applications/display-im6.desktop
 hide /usr/share/applications/display-im6.q16.desktop
 hide /usr/share/applications/exo-file-manager.desktop
