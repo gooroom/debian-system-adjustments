@@ -71,6 +71,7 @@ hide /usr/share/applications/xfce4-session-logout.desktop
 hide /usr/share/applications/xfce4-settings-editor.desktop
 hide /usr/share/applications/xfce4-terminal.desktop
 hide /usr/share/applications/xterm.desktop
+hide /usr/share/applications/yad-icon-browser.desktop
 show /usr/share/applications/gooroom-control-center.desktop
 #categories /usr/share/applications/Thunar.desktop System
 categories /usr/share/applications/xfce4-mixer.desktop Settings
