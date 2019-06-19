@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+## Enable ayatana-indicator-application service for GNOME
+#
+
+SRC_FILE=/usr/share/debian-system-adjustments/autostart/ayatana-indicator-application.desktop
+TARGET_DIR=/etc/xdg/autostart/
+
+if [ -e $SRC_FILE ]; then
+  cp $SRC_FILE $TARGET_DIR
+fi
