@@ -1,4 +1,4 @@
-auth    [success=2 default=ignore]  pam_unix.so nullok_secure
+auth    [success=2 default=ignore]  pam_unix.so nullok_secure try_first_pass
 auth    [success=1 default=ignore]  pam_gooroom.so
 # here's the fallback if no module succeeds
 auth    requisite           pam_deny.so
