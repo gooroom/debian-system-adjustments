@@ -81,3 +81,5 @@ rename /usr/share/applications/Thunar.desktop /usr/share/debian-system-adjustmen
 rename /usr/share/applications/mousepad.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/mousepad.desktop
 rename /usr/share/applications/org.gnome.Nautilus.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/org.gnome.Nautilus.desktop
 rename /usr/share/applications/xfce4-terminal.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/xfce4-terminal.desktop
+rename /usr/share/applications/io.github.GnomeMpv.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/io.github.GnomeMpv.desktop
+rename /usr/share/applications/nimf-settings.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/nimf-settings.desktop

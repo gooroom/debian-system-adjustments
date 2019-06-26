@@ -4,17 +4,6 @@
 
 set -e
 
-# summary of how this script can be called:
-#        * <postinst> `configure' <most-recently-configured-version>
-#        * <old-postinst> `abort-upgrade' <new version>
-#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
-#          <new-version>
-#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
-#          <failed-install-package> <version> `removing'
-#          <conflicting-package> <version>
-# for details, see http://www.debian.org/doc/debian-policy/ or
-# the debian-policy package
-#
 update_os_release()
 {
     if [ -e /etc/os-release ]; then
@@ -41,24 +30,8 @@ case "$1" in
     ;;
 esac
 
-
 # Install gooroom-shutdown-trigger.service
 ln -sf /usr/share/debian-system-adjustments/gooroom-shutdown-trigger.service /etc/systemd/system/
 systemctl enable gooroom-shutdown-trigger
-
-# grub-mkfont
-if [ ! -e /boot/grub/fonts ]; then
-   mkdir -p /boot/grub/fonts
-fi
-
-# create the hangul pf2
-GRUB_FONTNAME=D2Coding-Ver1.3.2-20180524-all.ttc
-if [ -e /usr/share/fonts/truetype/naver-d2coding/$GRUB_FONTNAME ]; then
-  grub-mkfont -s 20 -o /boot/grub/fonts/gooroom-font.pf2 /usr/share/fonts/truetype/naver-d2coding/$GRUB_FONTNAME
-elif [ -e /usr/share/fonts/truetype/nanum/NanumBarunpenB.ttf ]; then
-  grub-mkfont -s 20 -o /boot/grub/fonts/gooroom-font.pf2 /usr/share/fonts/truetype/nanum/NanumBarunpenB.ttf
-fi
-
-#DEBHELPER#
 
 exit 0

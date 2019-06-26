@@ -2,7 +2,9 @@ Source: debian-system-adjustments
 Section: admin
 Priority: optional
 Maintainer: gooroom <gooroom@gooroom.kr>
-Build-Depends: debhelper (>= 9) 
+Build-Depends: debhelper (>= 9),
+ fonts-naver-d2coding,
+ grub-common
 Standards-Version: 3.9.6
 
 Package: debian-system-adjustments

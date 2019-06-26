@@ -2,6 +2,9 @@
 #
 # Check webdav mountpoint and umount it at system shutdown
 
+#- xfce on gooroom-1.0
+WINDOW_MANAGER=gnome-flashback
+
 echo "[Gooroom] Starting gooroom-shutdown-trigger.sh"
 
 sleep 1
@@ -20,7 +23,7 @@ if [ -n "$WEBStorage" ]; then
     mount | grep $WEBStorage
 
     echo "[Gooroom] umounting $WEBStorage"
-    while [ "$(/usr/bin/pgrep xfce)" == "0" ]
+    while [ "$(/usr/bin/pgrep $WINDOW_MANAGER)" == "0" ]
     do
         sleep 1
     done
