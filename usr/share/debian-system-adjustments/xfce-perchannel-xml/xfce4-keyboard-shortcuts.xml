@@ -8,7 +8,7 @@
         <property name="startup-notify" type="bool" value="true"/>
       </property>
       <property name="&lt;Super&gt;b" type="string" value="gooroom-browser"/>
-      <property name="&lt;Super&gt;e" type="string" value="thunar"/>
+      <property name="&lt;Super&gt;e" type="string" value="nautilus"/>
       <property name="&lt;Super&gt;o" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Super&gt;c" type="string" value="gooroom-control-center"/>
       <property name="&lt;Super&gt;p" type="string" value="xfce4-panel --preferences"/>
