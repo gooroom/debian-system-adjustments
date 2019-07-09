@@ -8,6 +8,12 @@ for src in $(ls $GOOROOM_DIR/*.mo); do
     cp $src $TARGET_DIR
 done
 
+# Grub mo
+if [ -e /usr/share/gooroom/locale/debian/grub/ko/grub.mo ]; then
+    cp /usr/share/gooroom/locale/debian/grub/ko/grub.mo \
+       /boot/grub/locale/ko.mo
+fi
+
 # Translate galculator.desktop
 GALCULATOR_DESKTOP=/usr/share/applications/galculator.desktop
 if [ -e $GALCULATOR_DESKTOP ]; then
