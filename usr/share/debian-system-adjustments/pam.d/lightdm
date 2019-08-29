@@ -80,7 +80,7 @@ session [success=ok ignore=ignore module_unknown=ignore default=bad] pam_selinux
 
 #@include common-password
 # here are the per-package modules (the "Primary" block)
-password    required            pam_pwquality.so retry=3
+password    requisite            pam_pwquality.so retry=3
 password    [success=2 user_unknown=ignore default=done]    pam_gooroom.so try_first_pass
 password    [success=1 default=ignore]  pam_unix.so obscure use_authtok try_first_pass sha512
 # here's the fallback if no module succeeds
