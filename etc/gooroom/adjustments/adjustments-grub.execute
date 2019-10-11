@@ -10,12 +10,13 @@ try:
     #
     if os.path.exists("/etc/default/grub"):
         # Check gooroom-grub package
-        rc = call (["dpkg", "-s", "gooroom-grub"], shell=False)
+        rc = call (["test", "-e","/usr/lib/grub/x86_64-efi/themes/warningimages/verified_boot_fail.png"], shell=False)
+        # - GRUB_DISABLED_LINUX_UUID
         if rc == 0:
-            # - GRUB_DISABLED_LINUX_UUID
+            print("gooroom-grub is installed")
             os.system ("sed -i -e s'@#*GRUB_DISABLE_LINUX_UUID=true@GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
         elif rc == 1:
-            # - GRUB_ENABLED_LINUX_UUID
+            print("gooroom-grub is not installed")
             os.system ("sed -i -e s'@^GRUB_DISABLE_LINUX_UUID=true@#GRUB_DISABLE_LINUX_UUID=true@g' /etc/default/grub")
         else:
             print("error %d" % rc)
@@ -40,6 +41,15 @@ try:
                os.system("sed -i -e s'@GRUB_CMDLINE_LINUX_DEFAULT=\"@GRUB_CMDLINE_LINUX_DEFAULT=\"intremap=off @g' /etc/default/grub")
            else:
                print("error %d" % rc)
+
+        # GRUB_CMDLINE_DEFAULT="splash"
+        rc = call (["grep", "-qrs", "splash", "/etc/default/grub"], shell=False)
+        if rc == 0:
+            print("Kernel Parameter splash has already been registered.")
+        elif rc == 1:
+            os.system("sed -i -e s'@GRUB_CMDLINE_LINUX_DEFAULT=\"@GRUB_CMDLINE_LINUX_DEFAULT=\"splash @g' /etc/default/grub")
+        else:
+            print("error %d" % rc)
 
     #
     ## /etc/grub.d/10_linux (Change the GRUB_TITLE)
