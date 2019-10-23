@@ -72,6 +72,8 @@ hide /usr/share/applications/xfce4-settings-editor.desktop
 hide /usr/share/applications/xfce4-terminal.desktop
 hide /usr/share/applications/xterm.desktop
 hide /usr/share/applications/yad-icon-browser.desktop
+hide /usr/share/applications/gdebi.desktop
+hide /usr/share/applications/nimf-settings.desktop
 show /usr/share/applications/gooroom-control-center.desktop
 #categories /usr/share/applications/Thunar.desktop System
 categories /usr/share/applications/xfce4-mixer.desktop Settings
@@ -82,4 +84,3 @@ rename /usr/share/applications/mousepad.desktop /usr/share/debian-system-adjustm
 rename /usr/share/applications/org.gnome.Nautilus.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/org.gnome.Nautilus.desktop
 rename /usr/share/applications/xfce4-terminal.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/xfce4-terminal.desktop
 rename /usr/share/applications/io.github.GnomeMpv.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/io.github.GnomeMpv.desktop
-rename /usr/share/applications/nimf-settings.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/nimf-settings.desktop
