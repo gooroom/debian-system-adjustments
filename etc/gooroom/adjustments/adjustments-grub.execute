@@ -28,7 +28,7 @@ try:
             print("Gooroom's Grub Background has already been registered")
         elif rc == 1:
             print("not exist")
-            os.system("echo '\n%s\nGRUB_BACKGROUND=\'/usr/share/plymouth/themes/gooroom/gooroom_bg_17_logo.png\'' >> /etc/default/grub" % comment)
+            os.system("echo '\n%s\nGRUB_BACKGROUND=\'/usr/share/backgrounds/gooroom/gooroom_theme_bg_2.jpg\'' >> /etc/default/grub" % comment)
         else:
             print("error %d" % rc)
 

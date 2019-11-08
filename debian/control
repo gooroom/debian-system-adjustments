@@ -7,7 +7,8 @@ Build-Depends: debhelper (>= 9),
  grub-common
 Standards-Version: 3.9.6
 Homepage: http://www.gooroom.kr
-Vcs-Git: https://github.com/gooroom/debian-system-adjustments
+Vcs-Git: https://github.com/gooroom/debian-system-adjustments.git
+Vcs-Browser: https://github.com/gooroom/debian-system-adjustments
 
 Package: debian-system-adjustments
 Architecture: all
