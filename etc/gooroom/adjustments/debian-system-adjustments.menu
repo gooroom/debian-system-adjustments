@@ -27,7 +27,6 @@ hide /usr/share/applications/im-config.desktop
 hide /usr/share/applications/menulibre.desktop
 hide /usr/share/applications/network.desktop
 hide /usr/share/applications/nm-applet.desktop
-hide /usr/share/applications/nm-connection-editor.desktop
 hide /usr/share/applications/org.gnome.FileRoller.desktop
 hide /usr/share/applications/panel-desktop-handler.desktop
 hide /usr/share/applications/panel-preferences.desktop
@@ -84,3 +83,5 @@ rename /usr/share/applications/mousepad.desktop /usr/share/debian-system-adjustm
 rename /usr/share/applications/org.gnome.Nautilus.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/org.gnome.Nautilus.desktop
 rename /usr/share/applications/xfce4-terminal.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/xfce4-terminal.desktop
 rename /usr/share/applications/io.github.GnomeMpv.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/io.github.GnomeMpv.desktop
+rename /usr/share/applications/nm-connection-editor.desktop /usr/share/debian-system-adjustments/renamed-menu-entries/nm-connection-editor.desktop
+hide /usr/share/applications/nm-connection-editor.desktop
