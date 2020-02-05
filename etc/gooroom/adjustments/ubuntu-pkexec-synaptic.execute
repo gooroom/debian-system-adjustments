@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+## Gnome-Bluetooth pin-code-database Default Settings
+#
+
+SRC_FILE=/usr/share/debian-system-adjustments/ubuntu-pkexec-synaptic/com.ubuntu.pkexec.synaptic.policy
+TARGET_FILE=/usr/share/polkit-1/actions/com.ubuntu.pkexec.synaptic.policy
+
+if [[ -e $SRC_FILE ]] && [[ -e $TARGET_FILE ]]; then
+  cp $SRC_FILE $TARGET_FILE
+fi
