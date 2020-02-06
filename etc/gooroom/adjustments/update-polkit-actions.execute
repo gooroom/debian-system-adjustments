@@ -4,7 +4,7 @@
 ## Gnome-Bluetooth pin-code-database Default Settings
 #
 
-SRC_FILE=/usr/share/debian-system-adjustments/ubuntu-pkexec-synaptic/com.ubuntu.pkexec.synaptic.policy
+SRC_FILE=/usr/share/debian-system-adjustments/polkit-actions/com.ubuntu.pkexec.synaptic.policy
 TARGET_FILE=/usr/share/polkit-1/actions/com.ubuntu.pkexec.synaptic.policy
 
 if [[ -e $SRC_FILE ]] && [[ -e $TARGET_FILE ]]; then

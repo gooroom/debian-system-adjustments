@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#
+## Gnome-bluetooth Default Settings
+#
+BLUETOOTH_SRC_FILE=/usr/share/debian-system-adjustments/gnome-control-center/pin-code-database.xml
+BLUETOOTH_TARGET_FILE=/usr/share/gnome-bluetooth/pin-code-database.xml
+
+#
+## Gnome-control-center Default Settings
+#
+MINER_FILES_SRC_FILE=/usr/share/debian-system-adjustments/gnome-control-center/org.freedesktop.Tracker.Miner.Files.gschema.xml
+MINER_FILES_TARGET_FILE=/usr/share/glib-2.0/schemas/org.freedesktop.Tracker.Miner.Files.gschema.xml
+
+if [[ -e $BLUETOOTH_SRC_FILE ]] && [[ -e $BLUETOOTH_TARGET_FILE ]]; then
+  cp $BLUETOOTH_SRC_FILE $BLUETOOTH_TARGET_FILE
+
+fi
+
+if [[ -e $MINER_FILES_SRC_FILE ]] && [[ -e $MINER_FILES_TARGET_FILE ]]; then
+  cp $MINER_FILES_SRC_FILE $MINER_FILES_TARGET_FILE
+
+  glib-compile-schemas /usr/share/glib-2.0/schemas/
+fi
