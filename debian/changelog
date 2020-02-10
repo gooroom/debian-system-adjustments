@@ -1,3 +1,21 @@
+debian-system-adjustments (1.3.6+grm2u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [250b30c7] Removed pam.d-update-gnome-screensaver.execute to gnome-screensaver package
+
+  [ HaeRyong Jeong ]
+  * [8070a8f6] [Bugs: 1809, 1827] Added pin-code-database.execute for gnome-bluetooth
+  * [39f065cf] [Bug:1905] Fixed authoer tab toggle feature in search panel
+  * [ecb38f93] [Bug:1907] Added synaptic-pkexec command locale ko translation.
+  * [d760daf7] File merge related to gnome-control-center and polkit-actions.
+
+  [ cjheo ]
+  * [e59660d9] Update nm-connection-editor.desktop for korean translation
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 10 Feb 2020 19:11:32 +0900
+
 debian-system-adjustments (1.3.5+grm2u1) unstable; urgency=medium
 
   * Initial Release
