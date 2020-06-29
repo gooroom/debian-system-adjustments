@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+## default-testpage.pdf Settings
+#
+DEFAULT_TESTPAGE_SRC_FILE=/usr/share/debian-system-adjustments/cups-data/default-testpage.pdf
+DEFAULT_TESTPAGE_TARGET_FILE=/usr/share/cups/data/default-testpage.pdf
+
+if [[ -e $DEFAULT_TESTPAGE_SRC_FILE ]] && [[ -e $DEFAULT_TESTPAGE_TARGET_FILE ]]; then
+  cp $DEFAULT_TESTPAGE_SRC_FILE $DEFAULT_TESTPAGE_TARGET_FILE
+fi
