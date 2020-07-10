@@ -1,3 +1,12 @@
+debian-system-adjustments (1.3.8+grm2u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [ab96e20b] Modified gooroom-shtudown-trigger.sh
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Fri, 10 Jul 2020 18:25:03 +0900
+
 debian-system-adjustments (1.3.7+grm2u1) unstable; urgency=medium
 
   [ HaeRyong Jeong ]
