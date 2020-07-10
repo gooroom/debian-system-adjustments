@@ -3,8 +3,8 @@ Section: admin
 Priority: optional
 Maintainer: gooroom <gooroom@gooroom.kr>
 Build-Depends: debhelper (>= 9),
- fonts-naver-d2coding,
- grub-common
+               fonts-naver-d2coding,
+               grub-common
 Standards-Version: 3.9.6
 Homepage: http://www.gooroom.kr
 Vcs-Git: https://github.com/gooroom/debian-system-adjustments.git

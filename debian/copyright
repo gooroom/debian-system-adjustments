@@ -3,11 +3,11 @@ Upstream-Name: debian-system-adjustments
 Source: https://github.com/gooroom/debian-system-adjustments
 
 Files: *
-Copyright: 2019 gooroom <gooroom@gooroom.kr>
+Copyright: 2019-2020 gooroom <gooroom@gooroom.kr>
 License: GPL-2.0+
 
 Files: debian/*
-Copyright: 2019 gooroom <gooroom@gooroom.kr>
+Copyright: 2019-2020 gooroom <gooroom@gooroom.kr>
 License: GPL-2.0+
 
 License: GPL-2.0+

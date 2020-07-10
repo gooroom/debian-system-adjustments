@@ -1,0 +1,72 @@
+#! /bin/bash
+
+#
+# Check webdav mountpoint and umount it at system shutdown
+#
+
+#
+# Copyright (C) 2016-2020 Jongkyung Woo <jkwoo@gooroom.kr>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+LOG=/tmp/.gooroom-shutdown-trigger.log
+exec > >(tee $LOG) 2>&1
+
+set -x
+
+echo `date +%F-%T-%N`
+
+window_manager=gnome-flashback
+pam_mount_file=/etc/security/pam_mount.conf.xml
+
+set_webstorage() {
+    WEB_STORAGE=$(grep path ${pam_mount_file} \
+                            | awk -F "\"" '{print $6}' \
+                            | awk -F "/" '{print $4}')
+}
+
+echo "[Gooroom] Starting gooroom-shutdown-trigger.sh"
+sleep 1
+
+#
+# Check the webdav mountpoint in pam_mount.conf.xml
+# - mountpoint=/home/$USER/WEBStorage
+#
+if [ -e ${pam_mount_file} ]; then
+    grep -q path ${pam_mount_file}
+    [ $? = 0 ] && set_webstorage || exit -1;
+else
+    exit -1;
+fi
+
+if [ -n "${WEB_STORAGE}" ]; then
+    mount | grep ${WEB_STORAGE}
+
+    echo "[Gooroom] umounting ${WEB_STORAGE}"
+    while [ "$(/usr/bin/pgrep ${window_manager})" == "0" ]
+    do
+        sleep 1
+    done
+
+    # TODO. 
+    # Get the actual login id (%USER) with WEB_STORAGE information
+    for i in $(mount | grep ${WEB_STORAGE} | awk '{print $3}') ; do
+        fusermount -u $i
+    done
+else
+    exit -1;
+fi
+
+exit 0;
