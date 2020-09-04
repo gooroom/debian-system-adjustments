@@ -14,7 +14,9 @@ Package: debian-system-adjustments
 Architecture: all
 Depends: ${misc:Depends},
          libglib2.0-bin,
-         python
+         python,
+         libpam-pwquality,
+         libpam-script
 Description: Debian system adjustments
  This package contains scripts and files that changes 
  from Debian to Gooroom Flatform based enviroment.
