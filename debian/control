@@ -16,7 +16,7 @@ Depends: ${misc:Depends},
          libglib2.0-bin,
          python,
          libpam-pwquality,
-         libpam-script
+         ayatana-indicator-application
 Description: Debian system adjustments
  This package contains scripts and files that changes 
  from Debian to Gooroom Flatform based enviroment.
