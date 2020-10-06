@@ -1,3 +1,12 @@
+debian-system-adjustments (1.4.0+grm2u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [2ba8cc77] Add ayatana-indicator-application in control
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Tue, 06 Oct 2020 15:56:48 +0900
+
 debian-system-adjustments (1.3.9+grm2u1) unstable; urgency=medium
 
   [ jongkyung.woo ]
