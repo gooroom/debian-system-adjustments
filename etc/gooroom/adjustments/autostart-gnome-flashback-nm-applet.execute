@@ -4,9 +4,10 @@
 ## nm-applet support indicator application
 #
 
-SRC_FILE=/usr/share/debian-system-adjustments/autostart/gnome-flashback-nm-applet.desktop
-TARGET_DIR=/etc/xdg/autostart/
+DESKTOP=gnome-flashback-nm-applet.desktop
+SRC_DIR=/usr/share/debian-system-adjustments/autostart
+TARGET_DIR=/etc/xdg/autostart
 
-if [ -e $SRC_FILE ]; then
-  cp $SRC_FILE $TARGET_DIR
+if [ -e $SRC_DIR/$DESKTOP -a -e $TARGET_DIR/$DESKTOP ]; then
+  cp $SRC_DIR/$DESKTOP $TARGET_DIR/$DESKTOP
 fi
