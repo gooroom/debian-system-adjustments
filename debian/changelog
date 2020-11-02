@@ -1,3 +1,12 @@
+debian-system-adjustments (1.4.1+grm2u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [eab7593a] Added gnome-session-flashback dependency
+
+  [ Gooroom Autobuilder ]
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 02 Nov 2020 15:55:58 +0900
+
 debian-system-adjustments (1.4.0+grm2u1) unstable; urgency=medium
 
   [ jongkyung.woo ]
