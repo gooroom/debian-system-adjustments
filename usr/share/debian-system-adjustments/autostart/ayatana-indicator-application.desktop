@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Ayatana Indicator Application
-Exec=/usr/lib/x86_64-linux-gnu/ayatana-indicator-application/ayatana-indicator-application-service
+Exec=/usr/libexec/ayatana-indicator-application/ayatana-indicator-application-service
 StartupNotify=false
 Terminal=false
 OnlyShowIn=Unity;MATE;XFCE;Budgie;GNOME;

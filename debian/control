@@ -14,7 +14,7 @@ Package: debian-system-adjustments
 Architecture: all
 Depends: ${misc:Depends},
          libglib2.0-bin,
-         python,
+         python2.7,
          libpam-pwquality,
          ayatana-indicator-application
 Description: Debian system adjustments
