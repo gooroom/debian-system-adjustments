@@ -30,8 +30,8 @@ case "$1" in
     ;;
 esac
 
-# Install gooroom-shutdown-trigger.service
-ln -sf /usr/share/debian-system-adjustments/gooroom-shutdown-trigger.service /etc/systemd/system/
-systemctl enable gooroom-shutdown-trigger
+# Disabed gooroom-shutdown-trigger.service
+#ln -sf /usr/share/debian-system-adjustments/gooroom-shutdown-trigger.service /etc/systemd/system/
+#systemctl enable gooroom-shutdown-trigger
 
 exit 0
