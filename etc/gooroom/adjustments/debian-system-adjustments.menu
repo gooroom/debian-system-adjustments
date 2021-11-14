@@ -73,6 +73,7 @@ hide /usr/share/applications/xterm.desktop
 hide /usr/share/applications/yad-icon-browser.desktop
 hide /usr/share/applications/gdebi.desktop
 hide /usr/share/applications/nimf-settings.desktop
+hide /usr/share/applications/org.freedesktop.MalcontentControl.desktop
 show /usr/share/applications/gooroom-control-center.desktop
 #categories /usr/share/applications/Thunar.desktop System
 categories /usr/share/applications/xfce4-mixer.desktop Settings
