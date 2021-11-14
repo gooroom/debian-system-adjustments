@@ -26,3 +26,12 @@ dpkg -l | grep -q gooroom-cleanmode-utils
 if [ $? -eq 0 ]; then
     [ -e $CLEANMODE_PAM_FILE ] && cp $CLEANMODE_PAM_FILE $TARGET_DIR
 fi
+
+# lightdm process ACL(Access control list)
+lightdm_id="lightdm"
+# nemo
+/usr/bin/setfacl -m "u:$lightdm_id:---" /usr/bin/nemo
+# nautilus
+/usr/bin/setfacl -m "u:$lightdm_id:---" /usr/bin/nautilus
+# gnome-terminal
+/usr/bin/setfacl -m "u:$lightdm_id:---" /usr/bin/gnome-terminal
