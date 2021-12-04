@@ -1,3 +1,17 @@
+debian-system-adjustments (2.0.1+grm3u1) unstable; urgency=medium
+
+  [ cjheo ]
+  * [d8538c09] Rebase for Gooroom-3.0
+
+  [ jongkyung.woo ]
+  * [855a4cef] Added cleanmode feature
+  * [c7a14eb5] Supported python2.7
+  * [add5ccc2] Removed gooroom-shutdown-trigger
+  * [145bf841] Added lightdm process ACL(Access control list)
+  * [b995ee73] hide org.freedesktop.MalcontentControl.desktop
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Sat, 04 Dec 2021 13:11:24 +0900
+
 debian-system-adjustments (1.4.1+grm2u1) unstable; urgency=medium
 
   [ jongkyung.woo ]
