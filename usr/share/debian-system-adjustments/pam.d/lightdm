@@ -24,7 +24,7 @@ auth    optional            pam_mount.so
 auth    optional            pam_cap.so
 # end of pam-auth-update config
 
--auth  optional pam_gnome_keyring.so
+auth  optional pam_gnome_keyring.so
 
 #@include common-account
 
@@ -76,7 +76,7 @@ session [success=ok ignore=ignore module_unknown=ignore default=bad] pam_selinux
 # When the module is present, "required" would be sufficient (When SELinux
 # is disabled, this returns success.)
 
--session optional        pam_gnome_keyring.so auto_start
+session optional        pam_gnome_keyring.so auto_start
 
 #@include common-password
 # here are the per-package modules (the "Primary" block)
