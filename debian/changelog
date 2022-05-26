@@ -1,3 +1,10 @@
+debian-system-adjustments (3.1.0+grm3u1) unstable; urgency=medium
+
+  [ boyeon.choi ]
+  * [89be93aa] Added pam.d/lightdm options for gnome-keyring issues
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Thu, 26 May 2022 18:59:14 +0900
+
 debian-system-adjustments (2.0.1+grm3u1) unstable; urgency=medium
 
   [ cjheo ]
