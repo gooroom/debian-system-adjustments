@@ -1,3 +1,13 @@
+debian-system-adjustments (3.1.1+grm3u1) unstable; urgency=medium
+
+  [ boyeon.choi ]
+  * [89be93aa] Added pam.d/lightdm options for gnome-keyring issues
+
+  [ heejun.jang ]
+  * [361d9518] Updated nautilus description message
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 20 Jun 2022 16:24:08 +0900
+
 debian-system-adjustments (2.0.1+grm3u1) unstable; urgency=medium
 
   [ cjheo ]
