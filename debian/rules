@@ -8,7 +8,7 @@ GRUB_FONT=D2Coding-Ver1.3.2-20180524-all.ttc
 override_dh_auto_configure:
 	mkdir -p boot/grub/fonts
 	grub-mkfont -s 20 -o boot/grub/fonts/gooroom-font.pf2 \
-						/usr/share/fonts/truetype/naver-d2coding/$(GRUB_FONT)
+			     /usr/share/fonts/truetype/naver-d2coding/$(GRUB_FONT)
 
 override_dh_installdeb:
 	dh_installdeb
