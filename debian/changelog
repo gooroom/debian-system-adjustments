@@ -1,3 +1,10 @@
+debian-system-adjustments (3.2.1+grm3u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [42f3bbd1] Disable /etc/gooroom/adjustments directory initialization in preinst
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Wed, 17 Aug 2022 16:49:42 +0900
+
 debian-system-adjustments (3.1.1+grm3u1) unstable; urgency=medium
 
   [ heejun.jang ]
